@@ -24,7 +24,7 @@ class ArticlesController extends Controller {
 			'defaultPageSize' => 2,
 			'totalCount' => $articles->count()
 		]);
-		$articles = $articles->offset( $pagination->offset )->limit( $pagination->limit )->all();
+		$articles = $articles->offset( $pagination->offset )->limit( $pagination->limit );
 		$title = 'Статьи о заработке в интернете';
 		
 		return $this->render('articles', 
